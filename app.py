@@ -14,7 +14,7 @@ text_or_graph=st.sidebar.selectbox('결과 보는 방법:', ('그래프', '트�
 @st.cache(allow_output_mutation=True)
 def load_wordmodel(model):
     
-    with open('englishwordmodel0.pickle') as f:
+    with open('englishwordmodel0.pickle', ') as f:
         wordmodel=pickle.load(f)
     for k in range(1, 99):
         with open('englishwordmodel'+str(k)+'.pickle', 'rb') as f:
