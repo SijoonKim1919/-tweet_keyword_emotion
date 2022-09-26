@@ -21,7 +21,7 @@ def load_wordmodel(model):
             wordmodel=wordmodel.update(data)
     return wordmodel
 
-wordmodel=load_wordmodel('GoogleNews-vectors-negative300.bin.gz')\
+wordmodel=load_wordmodel('GoogleNews-vectors-negative300.bin.gz')
 st.write(wordmodel['man'])
 def word_to_num(w):
  
