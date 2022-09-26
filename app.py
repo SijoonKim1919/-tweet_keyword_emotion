@@ -20,7 +20,6 @@ def load_wordmodel():
     for k in range(1, 99):
         with open('englishwordmodel'+str(k)+'.pickle', 'rb') as f:
             data=pickle.load(f)
-            st.write(data)
             f.close()
         wordmodel=wordmodel.update(data)
     return wordmodel
