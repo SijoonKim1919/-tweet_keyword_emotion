@@ -17,6 +17,7 @@ def load_wordmodel():
     with open('englishwordmodel0.pickle', 'rb') as f:
         wordmodel=pickle.load(f)
         f.close()
+    print(wordmodel)
     for k in range(1, 99):
         with open('englishwordmodel'+str(k)+'.pickle', 'rb') as f:
             data=pickle.load(f)
