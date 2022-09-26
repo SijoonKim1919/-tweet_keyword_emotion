@@ -17,13 +17,12 @@ def load_wordmodel():
     with open('englishwordmodel0.pickle', 'rb') as f:
         wordmodel=pickle.load(f)
         f.close()
-    for k in range(1, 99):
-        with open('englishwordmodel'+str(k)+'.pickle', 'rb') as f:
-            data=pickle.load(f)
-            f.close()
-        st.write(list(wordmodel.keys())[:10])
-        wordmodel=wordmodel.update(data)
-    return wordmodel
+        for k in range(1, 99):
+            with open('englishwordmodel'+str(k)+'.pickle', 'rb') as g:
+                data=pickle.load(g)
+                g.close()
+                wordmodel=wordmodel.update(data)
+        return wordmodel
 
 wordmodel=load_wordmodel()
 st.write(wordmodel['man'])
