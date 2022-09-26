@@ -20,8 +20,9 @@ def load_wordmodel(model):
             data=pickle.load(f)
             wordmodel=wordmodel.update(data)
     return wordmodel
+
+wordmodel=load_wordmodel('GoogleNews-vectors-negative300.bin.gz')\
 st.write(wordmodel['man'])
-wordmodel=load_wordmodel('GoogleNews-vectors-negative300.bin.gz')
 def word_to_num(w):
  
   p=word_tokenize(w)
