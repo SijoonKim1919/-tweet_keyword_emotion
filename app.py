@@ -39,7 +39,7 @@ def word_to_num(w):
       else:
         words.append(lower_j)
   res=[]
-  vocab=list(wordmodel.index_to_key)
+  vocab=wordmodel.keys()
   for k in words:
     if k in vocab:
        res.append(wordmodel[k])
