@@ -99,8 +99,7 @@ if search_again:
       search=tweepy.Cursor(api.search_tweets,q=keyword,lang="en",tweet_mode="extended").items(500)
       
       for tweet in search:
-          st.write(tweet)
-          num_tweet=word_to_num(tweet.text)
+          num_tweet=word_to_num(tweet.full_text)
           if num_tweet==None:
             continue
           n=tf.math.argmax(model.predict(tf.convert_to_tensor([num_tweet]))[0]).numpy()
