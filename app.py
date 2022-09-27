@@ -96,9 +96,10 @@ if search_again:
   tweets={}
   emotion_dic={0:'슬픔', 1:'중립', 2:'걱정', 3:'놀람', 4:'기쁨/행복/사랑', 5:'분노/증오'}
   if keyword != '':
-      search=tweepy.Cursor(api.search_tweets,q="#bitcoin",lang="en",tweet_mode="extended").items(500)
+      search=tweepy.Cursor(api.search_tweets,q=keyword,lang="en",tweet_mode="extended").items(500)
       
       for tweet in search:
+          st.write(tweet)
           num_tweet=word_to_num(tweet.text)
           if num_tweet==None:
             continue
