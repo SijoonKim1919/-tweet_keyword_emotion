@@ -111,7 +111,7 @@ if search_again:
 elif 'tweets' in st.session_state:
   tweets=st.session_state.tweets
   emotion=st.session_state.emotion
-    st.write(tweets)
+  st.write(tweets)
 from collections import Counter
 if text_or_graph=='그래프':
   if 'emotion' in globals():
