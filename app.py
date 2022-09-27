@@ -43,7 +43,7 @@ def word_to_num(w):
   for k in words:
     if k in vocab:
        res.append(wordmodel[k])
-  if len(res)<=50 and len(res)>0:
+  if len(res)<50 and len(res)>0:
     left=50-len(res)
     unsplit=tf.zeros(300*left)
     split=tf.split(unsplit, left)
