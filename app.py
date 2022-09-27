@@ -103,7 +103,7 @@ if search_again:
           if num_tweet==None:
             continue
           n=tf.math.argmax(model.predict(tf.convert_to_tensor([num_tweet]))[0]).numpy()
-          tweets[tweet.text]=emotion_dic[n]
+          tweets[tweet.full_text]=emotion_dic[n]
   emotion=tweets.values()
 
   st.session_state.tweets=tweets
