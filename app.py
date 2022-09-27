@@ -22,7 +22,7 @@ def load_wordmodel():
                 data=pickle.load(g)
                 st.write(type(wordmodel))
                 st.write(type(data))
-                wordmodel=wordmodel.update(data)
+                wordmodel.update(data)
                 g.close()
         f.close()
         return wordmodel
