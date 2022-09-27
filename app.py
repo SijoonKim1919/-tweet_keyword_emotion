@@ -26,7 +26,6 @@ def load_wordmodel():
         return wordmodel
 
 wordmodel=load_wordmodel()
-st.write(wordmodel['man'])
 def word_to_num(w):
  
   p=word_tokenize(w)
