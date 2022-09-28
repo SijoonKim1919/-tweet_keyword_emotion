@@ -70,7 +70,7 @@ elif len(st.session_state.newdata)>=12:
   st.session_state.newdata={}
 st.title('AI 트윗 여론 분석')
 keyword=st.text_input("검색할 영어 키워드")
-search_again=st.button('')
+search_again=st.button('검색')
 st.session_state.search_again=False
 
 if search_again:
