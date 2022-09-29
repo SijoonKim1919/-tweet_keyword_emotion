@@ -68,7 +68,7 @@ elif len(st.session_state.newdata)>=12:
   model.fit(X_train, Y_train, epochs=3)
   keras.models.save_model(model, 'tweet_emotion_classify.h5', overwrite=True, include_optimizer=True)
   st.session_state.newdata={}
-st.title('AI 트윗 여론 분석')
+st.title('AI기반 트위터 내 키워드에 대한 분위기 분석')
 keyword=st.text_input("검색할 영어 키워드")
 search_again=st.button('검색')
 st.session_state.search_again=False
