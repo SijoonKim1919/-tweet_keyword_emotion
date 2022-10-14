@@ -75,7 +75,6 @@ st.session_state.search_again=False
 
 if search_again:
   st.session_state.search_again=True
-@st.cache(allow_output_mutation=True)
 def connect_api():
 
     consumer_key=st.secrets["consumer_key"]
