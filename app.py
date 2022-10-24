@@ -91,7 +91,7 @@ api=connect_api()
 emotion_type=['슬픔', '중립', '걱정', '놀람', '기쁨/행복/사랑', '분노/증오']
 
 if search_again:
-  
+  tweets={}
   emotion_dic={0:'슬픔', 1:'중립', 2:'걱정', 3:'놀람', 4:'기쁨/행복/사랑', 5:'분노/증오'}
   if keyword != '':
       search=tweepy.Cursor(api.search_tweets,q=keyword,lang="en",tweet_mode="extended").items(500)
